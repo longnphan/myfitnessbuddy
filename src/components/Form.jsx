@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Form() {
-  const [inputs, setInputs] = useState({});
+  const [inputs, setInputs] = useState({ gender: "male" });
 
   const handleOnChange = e => {
     const name = e.target.id;
