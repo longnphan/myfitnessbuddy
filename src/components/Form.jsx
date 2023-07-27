@@ -1,4 +1,21 @@
+import { useState } from "react";
+
 function Form() {
+  const [inputs, setInputs] = useState({});
+
+  const handleOnChange = e => {
+    const name = e.target.id;
+    const input = e.target.value;
+
+    setInputs(prev => ({ ...prev, [name]: input }));
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    // To do: add the input object to user profile.
+  };
+
   return (
     <form className="mx-auto form-control w-full max-w-xs py-7">
       <h1 className="text-3xl mx-auto mb-2">Create Profile</h1>
@@ -10,6 +27,8 @@ function Form() {
         type="text"
         placeholder="First name"
         className="input input-bordered input-info w-full max-w-xs"
+        value={inputs.name}
+        onChange={handleOnChange}
       />
 
       <label className="label" htmlFor="age">
@@ -17,9 +36,11 @@ function Form() {
       </label>
       <input
         id="age"
-        type="text"
+        type="number"
         placeholder="Age"
         className="input input-bordered input-info w-full max-w-xs"
+        value={inputs.age}
+        onChange={handleOnChange}
       />
 
       <label className="label" htmlFor="height">
@@ -27,9 +48,11 @@ function Form() {
       </label>
       <input
         id="height"
-        type="text"
+        type="number"
         placeholder="Height in inches"
         className="input input-bordered input-info w-full max-w-xs"
+        value={inputs.height}
+        onChange={handleOnChange}
       />
 
       <label className="label" htmlFor="weight">
@@ -37,20 +60,32 @@ function Form() {
       </label>
       <input
         id="weight"
-        type="text"
+        type="number"
         placeholder="Weight in pounds"
         className="input input-bordered input-info w-full max-w-xs"
+        value={inputs.weight}
+        onChange={handleOnChange}
       />
 
       <label className="label" htmlFor="gender">
         <span className="label-text">What is your gender?</span>
       </label>
-      <select id="gender" className="input input-info">
+      <select
+        id="gender"
+        className="input input-info"
+        value={inputs.gender}
+        onChange={handleOnChange}
+      >
         <option value="male">Male</option>
-        <option value="male">Female</option>
+        <option value="female">Female</option>
       </select>
 
-      <button className="btn btn-primary w-1/3 mt-7 mx-auto">Submit</button>
+      <button
+        className="btn btn-primary w-1/3 mt-7 mx-auto"
+        onClick={handleSubmit}
+      >
+        Submit
+      </button>
     </form>
   );
 }
