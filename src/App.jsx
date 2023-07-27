@@ -1,7 +1,9 @@
+import Navbar from "./components/NavBar";
+
 function App() {
   return (
     <>
-      <h1>App Connected!</h1>
+      <Navbar />
     </>
   );
 }
