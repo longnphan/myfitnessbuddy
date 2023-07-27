@@ -1,20 +1,20 @@
 function Navbar() {
   return (
-    <div className="navbar bg-primary text-primary-content">
-      <h1 className="btn btn-ghost normal-case text-2xl hover:bg-primary">
+    <div className="navbar bg-primary text-primary-content justify-between">
+      <h1 className="btn btn-ghost normal-case text-2xl hover:bg-transparent">
         MyFitnessBuddy
       </h1>
-      <div className="navbar-end gap-6">
-        <h1 className="btn btn-ghost normal-case text-xl px-2 cursor-pointer hover:text-slate-400 hover:bg-primary">
+      <ul className="gap-6 pr-4">
+        <li className="btn btn-ghost normal-case text-xl px-2 cursor-pointer hover:text-slate-400 hover:bg-transparent">
           Dashboard
-        </h1>
-        <h1 className="btn btn-ghost normal-case text-xl px-2 cursor-pointer hover:text-slate-400 hover:bg-primary">
+        </li>
+        <li className="btn btn-ghost normal-case text-xl px-2 cursor-pointer hover:text-slate-400 hover:bg-transparent">
           Tracker
-        </h1>
-        <h1 className="btn btn-ghost normal-case text-xl px-2 cursor-pointer hover:text-slate-400 hover:bg-primary">
+        </li>
+        <li className="btn btn-ghost normal-case text-xl px-2 cursor-pointer hover:text-slate-400 hover:bg-transparent">
           Profile
-        </h1>
-      </div>
+        </li>
+      </ul>
     </div>
   );
 }
