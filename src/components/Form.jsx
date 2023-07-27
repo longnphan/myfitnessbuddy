@@ -1,7 +1,7 @@
 function Form() {
   return (
-    <div className="mx-auto form-control w-full max-w-xs py-7">
-      <h1 className="text-3xl">Create Profile</h1>
+    <form className="mx-auto form-control w-full max-w-xs py-7">
+      <h1 className="text-3xl mx-auto mb-2">Create Profile</h1>
       <label className="label" htmlFor="name">
         <span className="label-text">What is your first name?</span>
       </label>
@@ -49,13 +49,9 @@ function Form() {
         <option value="male">Male</option>
         <option value="male">Female</option>
       </select>
-      {/* <input
-        id="gender"
-        type="text"
-        placeholder="Gender"
-        className="input input-bordered input-info w-full max-w-xs"
-      /> */}
-    </div>
+
+      <button className="btn btn-primary w-1/3 mt-7 mx-auto">Submit</button>
+    </form>
   );
 }
 
