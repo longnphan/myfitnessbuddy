@@ -1,7 +1,17 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { updateProfile } from "../store/userSlice";
 
 function Form() {
-  const [inputs, setInputs] = useState({ gender: "male" });
+  const [inputs, setInputs] = useState({
+    name: "",
+    age: "",
+    height: "",
+    weight: "",
+    gender: "male",
+  });
+
+  const dispatch = useDispatch();
 
   const handleOnChange = e => {
     const name = e.target.id;
@@ -12,8 +22,7 @@ function Form() {
 
   const handleSubmit = e => {
     e.preventDefault();
-
-    // To do: add the input object to user profile.
+    dispatch(updateProfile(inputs));
   };
 
   return (
