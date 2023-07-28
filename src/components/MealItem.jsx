@@ -1,9 +1,9 @@
-function MealItem() {
+function MealItem({ meal }) {
   return (
     <>
-      <div className="rounded-none border border-slate-600 bg-slate-800 mt-10">
+      <div className="rounded-none border border-slate-600 bg-slate-800 mt-6">
         <div className="collapse-title text-xl font-bold font-medium">
-          Breakfast
+          {meal}
         </div>
       </div>
       <div className="rounded-none border border-slate-600 bg-slate-800">
