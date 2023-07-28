@@ -1,14 +1,18 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/NavBar";
 import Form from "./components/Form";
 import MealDisplay from "./components/MealDisplay";
-import MealItem from "./components/MealItem";
 
 function App() {
   return (
     <>
       <Navbar />
-      {/* <Form /> */}
-      <MealDisplay />
+
+      <Routes>
+        <Route path="/" element={<Form />} />
+        <Route path="/tracker" element={<MealDisplay />} />
+        <Route path="/profile" element={<Form />} />
+      </Routes>
     </>
   );
 }
