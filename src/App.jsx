@@ -3,6 +3,7 @@ import Navbar from "./components/NavBar";
 import Form from "./components/Form";
 import MealDisplay from "./components/MealDisplay";
 import Dashboard from "./pages/Dashboard";
+import SearchFood from "./pages/SearchFood";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/tracker" element={<MealDisplay />} />
         <Route path="/profile" element={<Form />} />
+        <Route path="/searchfood" element={<SearchFood />} />
       </Routes>
     </>
   );

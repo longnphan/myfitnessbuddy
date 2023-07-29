@@ -1,6 +1,9 @@
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function MealItem({ meal }) {
+  const navigate = useNavigate();
+
   const lowercaseMeal = meal.toLowerCase();
   const mealData = useSelector(state => state.user[lowercaseMeal]);
 
@@ -21,7 +24,10 @@ function MealItem({ meal }) {
       )}
 
       <div className="rounded-none border border-slate-600 bg-slate-800">
-        <div className="collapse-title text-xl text-blue-500 font-medium cursor-pointer">
+        <div
+          className="collapse-title text-xl text-blue-500 font-medium cursor-pointer"
+          onClick={() => navigate("/searchfood")}
+        >
           ADD FOOD
         </div>
       </div>
