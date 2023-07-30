@@ -15,7 +15,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/tracker" element={<MealDisplay />} />
         <Route path="/profile" element={<Form />} />
-        <Route path="/searchfood" element={<SearchFood />} />
+        <Route path="/searchfood/:meal" element={<SearchFood />} />
       </Routes>
     </>
   );
