@@ -7,11 +7,12 @@ function MealItem({ meal }) {
   const mealData = useSelector(state => state.user[lowercaseMeal]);
 
   const calcCalories = () => {
+    // Displays nothing instead of 0 if there are no calories to be displayed.
     return mealData.reduce((acc, cal) => acc + cal.calories, 0) || "";
   };
 
   const renderFoodItems = mealData.map(item => (
-    <FoodItem key={item.id} foodData={item} />
+    <FoodItem key={crypto.randomUUID()} foodData={item} />
   ));
 
   return (

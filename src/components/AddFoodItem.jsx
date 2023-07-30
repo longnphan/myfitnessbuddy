@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { addFood } from "../store/userSlice";
 
 function AddFoodItem({ foodItem }) {
-  const { label, foodId } = foodItem.food;
+  const { label } = foodItem.food;
   const { ENERC_KCAL, CHOCDF, PROCNT, FAT } = foodItem.food.nutrients;
   const params = useParams();
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ function AddFoodItem({ foodItem }) {
                 addFood({
                   meal: params.meal,
                   food: {
-                    id: foodId,
+                    id: crypto.randomUUID(),
                     food_name: label,
                     calories: Math.round(ENERC_KCAL),
                     carbs: Math.round(CHOCDF),
