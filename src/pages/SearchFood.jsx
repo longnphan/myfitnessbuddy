@@ -10,7 +10,6 @@ function SearchFood() {
     e.preventDefault();
     const foodResult = await searchFoods(searchInput);
     setFoodData(foodResult);
-    console.log("this is foodData:", foodData);
   };
 
   const renderFoodItems = foodData.map(item => (
