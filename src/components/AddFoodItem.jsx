@@ -9,7 +9,7 @@ function AddFoodItem({ foodItem }) {
   const dispatch = useDispatch();
 
   return (
-    <div className="rounded-none border border-slate-600 bg-slate-800 mt-4 h-20">
+    <div className="w-3/4 mx-auto rounded-none border border-slate-600 bg-slate-800 mt-4 h-20">
       <div className="collapse-title text-l font-bold font-medium">
         <p>{label}</p>
         <p className="flex justify-between">
@@ -24,10 +24,10 @@ function AddFoodItem({ foodItem }) {
                   food: {
                     id: foodId,
                     food_name: label,
-                    calories: ENERC_KCAL,
-                    carbs: CHOCDF,
-                    protein: PROCNT,
-                    fat: FAT,
+                    calories: Math.round(ENERC_KCAL),
+                    carbs: Math.round(CHOCDF),
+                    protein: Math.round(PROCNT),
+                    fat: Math.round(FAT),
                   },
                 })
               )
