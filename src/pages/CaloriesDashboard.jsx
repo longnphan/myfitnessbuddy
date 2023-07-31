@@ -34,7 +34,7 @@ function CaloriesDashboard() {
       data={data}
       options={options}
       width={"100%"}
-      height={"500px"}
+      height={"450px"}
     />
   );
 }
