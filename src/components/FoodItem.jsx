@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function FoodItem({ foodData }) {
   const [isHover, setIsHover] = useState(false);
-  const { calories, food_name } = foodData;
+  const { calories, food_name, id, meal } = foodData;
 
   return (
     <>
@@ -13,10 +14,12 @@ function FoodItem({ foodData }) {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <div className="flex justify-between collapse-title text-l font-medium">
-          <p>{food_name}</p>
-          <p>{calories}</p>
-        </div>
+        <Link to={`/details/${meal}&${id}`}>
+          <div className="flex justify-between collapse-title text-l font-medium">
+            <p>{food_name}</p>
+            <p>{calories}</p>
+          </div>
+        </Link>
       </div>
     </>
   );

@@ -48,7 +48,7 @@ function MacrosDashboard() {
 
   const options = {
     title: "Daily Macros",
-    backgroundColor: "#1D232A",
+    backgroundColor: "",
   };
 
   return (
