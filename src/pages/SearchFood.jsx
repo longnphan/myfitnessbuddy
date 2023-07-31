@@ -13,7 +13,7 @@ function SearchFood() {
   };
 
   const renderFoodItems = foodData.map(item => (
-    <AddFoodItem key={item.food.foodId} foodItem={item} />
+    <AddFoodItem key={crypto.randomUUID()} foodItem={item} />
   ));
 
   return (

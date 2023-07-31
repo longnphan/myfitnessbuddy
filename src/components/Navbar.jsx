@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { IoBarbell } from "react-icons/io5";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ function Navbar() {
         className="btn btn-ghost border-none normal-case text-2xl hover:bg-transparent"
         onClick={() => navigate("/")}
       >
-        MyFitnessBuddy
+        MyFitnessBuddy <IoBarbell className="text-4xl " />
       </h1>
       <ul className="gap-6 pr-4">
         <li
