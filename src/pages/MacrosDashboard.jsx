@@ -20,11 +20,19 @@ function MacrosDashboard() {
   ];
 
   const calcMacros = () => {
+    let newCarbs = 0;
+    let newProtein = 0;
+    let newFat = 0;
+
     for (let item of allMeals) {
-      setCarbs(carbs + item.carbs);
-      setprotein(protein + item.protein);
-      setFat(fat + item.fat);
+      newCarbs += item.carbs;
+      newProtein += item.protein;
+      newFat += item.fat;
     }
+
+    setCarbs(newCarbs);
+    setprotein(newProtein);
+    setFat(newFat);
   };
 
   useEffect(() => {
@@ -45,11 +53,12 @@ function MacrosDashboard() {
 
   return (
     <Chart
+      className="mx-auto my-auto"
       chartType="PieChart"
       data={data}
       options={options}
       width={"100%"}
-      height={"500px"}
+      height={"450px"}
     />
   );
 }

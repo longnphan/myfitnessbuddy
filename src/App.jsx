@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Form />} />
 
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-        <Route path="/dashboard" element={<CaloriesDashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
         <Route path="/tracker" element={<MealDisplay />} />
         <Route path="/profile" element={<Form />} />
