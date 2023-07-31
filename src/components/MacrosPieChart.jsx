@@ -10,6 +10,7 @@ function MacrosPieChart() {
 
   const options = {
     title: "Daily Macros",
+    backgroundColor: "#1D232A",
   };
 
   return (
