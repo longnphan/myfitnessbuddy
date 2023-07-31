@@ -32,6 +32,7 @@ function Form() {
         <span className="label-text">What is your first name?</span>
       </label>
       <input
+        required
         id="name"
         type="text"
         placeholder="First name"
@@ -44,6 +45,7 @@ function Form() {
         <span className="label-text">What is your age?</span>
       </label>
       <input
+        required
         id="age"
         type="number"
         placeholder="Age"
@@ -56,6 +58,7 @@ function Form() {
         <span className="label-text">What is your height?</span>
       </label>
       <input
+        required
         id="height"
         type="number"
         placeholder="Height in inches"
@@ -68,6 +71,7 @@ function Form() {
         <span className="label-text">What is your weight?</span>
       </label>
       <input
+        required
         id="weight"
         type="number"
         placeholder="Weight in pounds"

@@ -33,20 +33,6 @@ function Dashboard() {
       </ul>
 
       <div className="card w-3/5 mx-auto lg:card-side bg-slate-600 shadow-xl mt-7">
-        {/* <figure className="p-6">
-          <div
-            className="radial-progress"
-            style={{ "--value": "80", "--size": "12rem", "--thickness": "6px" }}
-          >
-            <p className="mx-auto">1000</p>
-            <p className="mx-auto">Remaining</p>
-          </div>
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">Base Goal</h2>
-          <h2 className="card-title">Food</h2>
-        </div> */}
-
         {caloriesActive ? <CaloriesDashboard /> : <MacrosDashboard />}
       </div>
     </>

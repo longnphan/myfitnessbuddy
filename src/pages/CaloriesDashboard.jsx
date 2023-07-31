@@ -25,7 +25,7 @@ function CaloriesDashboard() {
 
   const options = {
     title: "Daily Calories",
-    backgroundColor: "#1D232A",
+    backgroundColor: "",
   };
 
   return (

@@ -10,29 +10,20 @@ const userSlice = createSlice({
     snacks: [],
   },
   reducers: {
+    addFood(state, action) {
+      state[action.payload.meal].push(action.payload);
+    },
+    removeFood(state, action) {
+      const index = state[action.payload.meal].findIndex(
+        item => item.id === action.payload.id
+      );
+      state[action.payload.meal].splice(index, 1);
+    },
     updateProfile(state, action) {
       state.profile = action.payload;
-    },
-    addFood(state, action) {
-      switch (action.payload.meal) {
-        case "breakfast":
-          state.breakfast.push(action.payload.food);
-          return;
-        case "lunch":
-          state.lunch.push(action.payload.food);
-          return;
-        case "dinner":
-          state.dinner.push(action.payload.food);
-          return;
-        case "snacks":
-          state.snacks.push(action.payload.food);
-          return;
-        default:
-          return;
-      }
     },
   },
 });
 
-export const { updateProfile, updateSearchFood, addFood } = userSlice.actions;
+export const { addFood, removeFood, updateProfile } = userSlice.actions;
 export default userSlice.reducer;

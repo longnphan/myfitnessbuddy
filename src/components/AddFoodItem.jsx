@@ -12,15 +12,13 @@ function AddFoodItem({ foodItem }) {
   const handleClick = () => {
     dispatch(
       addFood({
+        id: crypto.randomUUID(),
+        food_name: label,
+        calories: Math.round(ENERC_KCAL),
+        carbs: Math.round(CHOCDF),
+        protein: Math.round(PROCNT),
+        fat: Math.round(FAT),
         meal: params.meal,
-        food: {
-          id: crypto.randomUUID(),
-          food_name: label,
-          calories: Math.round(ENERC_KCAL),
-          carbs: Math.round(CHOCDF),
-          protein: Math.round(PROCNT),
-          fat: Math.round(FAT),
-        },
       })
     );
 

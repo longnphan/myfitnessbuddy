@@ -8,7 +8,7 @@ function Navbar() {
     <div className="navbar bg-primary text-primary-content justify-between">
       <h1
         className="btn btn-ghost border-none normal-case text-2xl hover:bg-transparent"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/dashboard")}
       >
         MyFitnessBuddy <IoBarbell className="text-4xl " />
       </h1>
