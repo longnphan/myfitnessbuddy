@@ -10,7 +10,7 @@ function Navbar() {
         className="btn btn-ghost border-none normal-case text-2xl hover:bg-transparent"
         onClick={() => navigate("/dashboard")}
       >
-        MyFitnessBuddy <IoBarbell className="text-4xl " />
+        MyFitnessBuddy <IoBarbell className="text-4xl" />
       </h1>
       <ul className="gap-6 pr-4">
         <li
