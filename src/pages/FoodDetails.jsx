@@ -20,7 +20,7 @@ function FoodDetails() {
   return (
     <div className="card w-3/5 mx-auto lg:card bg-primary text-neutral shadow-xl mt-7 h-80">
       <div className="mx-auto mt-6 font-medium space-y-1">
-        <h1 className="text-2xl">{foodItem.food_name}</h1>
+        <h1 className="text-2xl underline">{foodItem.food_name}</h1>
         <p>Carbohydrate: {foodItem.carbs}</p>
         <p>Protein: {foodItem.protein}</p>
         <p>Fat: {foodItem.fat}</p>
