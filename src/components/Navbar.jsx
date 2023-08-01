@@ -54,7 +54,7 @@ function Navbar() {
             Profile Already Created
           </h3>
           <p className="py-4 text-neutral text-l font-medium">
-            Click "EDIT PROFILE" to update your profile or click "CLOSE" to
+            Click EDIT PROFILE to update your profile or click CLOSE to
             close this window.
           </p>
           <div className="modal-action">
