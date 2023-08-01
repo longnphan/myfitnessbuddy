@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { searchFoods } from "../utils/API";
 import AddFoodItem from "../components/AddFoodItem";
+import { useNavigate } from "react-router-dom";
 
 function SearchFood() {
   const [searchInput, setSearchInput] = useState("");
   const [foodData, setFoodData] = useState([]);
+
+  const navigate = useNavigate();
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -19,9 +22,15 @@ function SearchFood() {
   return (
     <div>
       <div className="card w-3/5 mx-auto rounded bg-primary mt-6">
-        <div className="card-body items-center text-center">
+        <p
+          className="text-2xl pl-2 text-neutral hover:text-accent cursor-pointer"
+          onClick={() => navigate("/tracker")}
+        >
+          &#8592;
+        </p>
+        <div className="card-body items-center text-center -mt-2">
           <form
-            className="mx-auto form-control w-full max-w-xs py-7"
+            className="mx-auto form-control w-full max-w-xs"
             onSubmit={handleSubmit}
           >
             <input
