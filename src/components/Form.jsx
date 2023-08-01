@@ -5,25 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 function Form() {
   const userProfile = useSelector(state => state.user.profile);
-
   const [inputs, setInputs] = useState(userProfile);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const calcDailyCals = bio => {
-    if (bio.gender === "male") {
-      let maleResult = 15 * bio.weight;
-      console.log("male cal:", maleResult);
-      return maleResult;
-    }
-
-    if (bio.gender === "female") {
-      let femaleResult = 12 * bio.weight;
-      console.log("female cal:", femaleResult);
-      return femaleResult;
-    }
-  };
 
   const handleOnChange = e => {
     const name = e.target.id;
@@ -32,9 +17,7 @@ function Form() {
   };
 
   const handleSubmit = e => {
-    const caloriesVal = calcDailyCals(inputs)
     e.preventDefault();
-    setInputs(prev => ({...prev, calories : caloriesVal }));
     dispatch(updateProfile(inputs));
     navigate("/tracker");
   };

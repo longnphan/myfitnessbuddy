@@ -8,7 +8,7 @@ function FoodItem({ foodData }) {
       <div className="w-3/5 mx-auto rounded-none border border-slate-600 bg-primary cursor-pointer hover:bg-secondary">
         <Link to={`/details/${meal}&${id}`}>
           <div className="flex justify-between collapse-title text-l text-neutral font-medium">
-            <p className="text-gray-800"> &#8226; {food_name}</p>
+            <p className="text-gray-800"> &nbsp; &nbsp; &#8226; {food_name}</p>
             <p className="text-gray-800">{calories}</p>
           </div>
         </Link>

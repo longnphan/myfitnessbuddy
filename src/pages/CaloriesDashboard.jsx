@@ -2,22 +2,15 @@ import { Chart } from "react-google-charts";
 import { useSelector } from "react-redux";
 
 function CaloriesDashboard() {
-  const breakfastMeals = useSelector(state =>
-    state.user.breakfast.reduce((acc, food) => acc + food.calories, 0)
-  );
-  const lunchMeals = useSelector(state =>
-    state.user.lunch.reduce((acc, food) => acc + food.calories, 0)
-  );
-  const dinnerMeals = useSelector(state =>
-    state.user.dinner.reduce((acc, food) => acc + food.calories, 0)
-  );
-  const snackMeals = useSelector(state =>
-    state.user.snacks.reduce((acc, food) => acc + food.calories, 0)
-  );
+  const { breakfast, lunch, dinner, snacks } = useSelector(state => state.user);
+  const bfMeals = breakfast.reduce((acc, food) => acc + food.calories, 0);
+  const lunchMeals = lunch.reduce((acc, food) => acc + food.calories, 0);
+  const dinnerMeals = dinner.reduce((acc, food) => acc + food.calories, 0);
+  const snackMeals = snacks.reduce((acc, food) => acc + food.calories, 0);
 
   const data = [
     ["Calories", "Percentage"],
-    ["Breakfast", breakfastMeals],
+    ["Breakfast", bfMeals],
     ["Lunch", lunchMeals],
     ["Dinner", dinnerMeals],
     ["Snacks", snackMeals],
@@ -25,7 +18,7 @@ function CaloriesDashboard() {
 
   const options = {
     title: "Daily Calories",
-    colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f'],
+    colors: ["#e0440e", "#e6693e", "#ec8f6e", "#f3b49f"],
     backgroundColor: "",
   };
 
