@@ -3,7 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const userSlice = createSlice({
   name: "user",
   initialState: {
-    profile: {},
+    profile: {
+      name: "",
+      age: "",
+      height: "",
+      weight: "",
+      gender: "male",
+      calories: "",
+    },
     breakfast: [],
     lunch: [],
     dinner: [],
@@ -21,6 +28,7 @@ const userSlice = createSlice({
     },
     updateProfile(state, action) {
       state.profile = action.payload;
+      
       // state.profile[action.payload.property] = action.payload.val
       console.log("This is profile in userSlice:", state.profile);
     },

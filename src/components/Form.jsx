@@ -4,29 +4,23 @@ import { updateProfile } from "../store/userSlice";
 import { useNavigate } from "react-router-dom";
 
 function Form() {
-  const [inputs, setInputs] = useState({
-    name: "",
-    age: "",
-    height: "",
-    weight: "",
-    calories: "",
-    gender: "male",
-  });
+  const userProfile = useSelector(state => state.user.profile);
 
-  const { name, age, height, weight, gender } = useSelector(
-    state => state.user.profile
-  );
+  const [inputs, setInputs] = useState(userProfile);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const calcDailyCals = bio => {
     if (bio.gender === "male") {
       let maleResult = 15 * bio.weight;
+      console.log("male cal:", maleResult);
       return maleResult;
     }
 
     if (bio.gender === "female") {
       let femaleResult = 12 * bio.weight;
+      console.log("female cal:", femaleResult);
       return femaleResult;
     }
   };
@@ -34,13 +28,13 @@ function Form() {
   const handleOnChange = e => {
     const name = e.target.id;
     const input = e.target.value;
-
     setInputs(prev => ({ ...prev, [name]: input }));
   };
 
   const handleSubmit = e => {
+    const caloriesVal = calcDailyCals(inputs)
     e.preventDefault();
-    setInputs(prev => ({ ...prev, calories: calcDailyCals(inputs) }));
+    setInputs(prev => ({...prev, calories : caloriesVal }));
     dispatch(updateProfile(inputs));
     navigate("/tracker");
   };
@@ -49,11 +43,7 @@ function Form() {
     <div className="mx-auto card w-3/5 bg-neutral text-neutral-content mt-6">
       <div className="card-body items-center text-center">
         <form className="mx-auto form-control w-full max-w-xs py-7">
-          <h1 className="text-3xl mx-auto mb-2">
-            {name && age && height && weight
-              ? "Edit Profile"
-              : "Create Profile"}
-          </h1>
+          <h1 className="text-3xl mx-auto mb-2">Profile</h1>
           <label className="label" htmlFor="name">
             <span className="label-text">What is your first name?</span>
           </label>
@@ -62,7 +52,7 @@ function Form() {
             type="text"
             placeholder="First name"
             className="input input-bordered input-info w-full max-w-xs"
-            value={name}
+            value={inputs.name}
             onChange={handleOnChange}
           />
 
@@ -74,7 +64,7 @@ function Form() {
             type="number"
             placeholder="Age"
             className="input input-bordered input-info w-full max-w-xs"
-            value={age}
+            value={inputs.age}
             onChange={handleOnChange}
           />
 
@@ -86,7 +76,7 @@ function Form() {
             type="number"
             placeholder="Height in inches"
             className="input input-bordered input-info w-full max-w-xs"
-            value={height}
+            value={inputs.height}
             onChange={handleOnChange}
           />
 
@@ -98,7 +88,7 @@ function Form() {
             type="number"
             placeholder="Weight in pounds"
             className="input input-bordered input-info w-full max-w-xs"
-            value={weight}
+            value={inputs.weight}
             onChange={handleOnChange}
           />
 
@@ -108,7 +98,7 @@ function Form() {
           <select
             id="gender"
             className="input input-info"
-            value={gender}
+            value={inputs.gender}
             onChange={handleOnChange}
           >
             <option value="male">Male</option>
