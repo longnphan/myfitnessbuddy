@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { updateProfile } from "../store/userSlice";
+import { useNavigate } from "react-router-dom";
 
 function Form() {
-  const [isComplete, setIsComplete] = useState(false);
   const [inputs, setInputs] = useState({
     name: "",
     age: "",
@@ -12,9 +12,12 @@ function Form() {
     calories: "",
     gender: "male",
   });
-  const [profile, setProfile] = useState([]);
 
+  const { name, age, height, weight, gender } = useSelector(
+    state => state.user.profile
+  );
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const calcDailyCals = bio => {
     if (bio.gender === "male") {
@@ -39,7 +42,7 @@ function Form() {
     e.preventDefault();
     setInputs(prev => ({ ...prev, calories: calcDailyCals(inputs) }));
     dispatch(updateProfile(inputs));
-    setIsComplete(!isComplete);
+    navigate("/tracker");
   };
 
   return (
@@ -47,7 +50,9 @@ function Form() {
       <div className="card-body items-center text-center">
         <form className="mx-auto form-control w-full max-w-xs py-7">
           <h1 className="text-3xl mx-auto mb-2">
-            {isComplete ? "Edit Profile" : "Create Profile"}
+            {name && age && height && weight
+              ? "Edit Profile"
+              : "Create Profile"}
           </h1>
           <label className="label" htmlFor="name">
             <span className="label-text">What is your first name?</span>
@@ -57,7 +62,7 @@ function Form() {
             type="text"
             placeholder="First name"
             className="input input-bordered input-info w-full max-w-xs"
-            value={inputs.name}
+            value={name}
             onChange={handleOnChange}
           />
 
@@ -69,7 +74,7 @@ function Form() {
             type="number"
             placeholder="Age"
             className="input input-bordered input-info w-full max-w-xs"
-            value={inputs.age}
+            value={age}
             onChange={handleOnChange}
           />
 
@@ -81,7 +86,7 @@ function Form() {
             type="number"
             placeholder="Height in inches"
             className="input input-bordered input-info w-full max-w-xs"
-            value={inputs.height}
+            value={height}
             onChange={handleOnChange}
           />
 
@@ -93,7 +98,7 @@ function Form() {
             type="number"
             placeholder="Weight in pounds"
             className="input input-bordered input-info w-full max-w-xs"
-            value={inputs.weight}
+            value={weight}
             onChange={handleOnChange}
           />
 
@@ -103,7 +108,7 @@ function Form() {
           <select
             id="gender"
             className="input input-info"
-            value={inputs.gender}
+            value={gender}
             onChange={handleOnChange}
           >
             <option value="male">Male</option>
@@ -114,7 +119,7 @@ function Form() {
             className="btn btn-primary w-1/3 mt-7 mx-auto"
             onClick={handleSubmit}
           >
-            {isComplete ? "Edit" : "Submit"}
+            Submit
           </button>
         </form>
       </div>
