@@ -26,7 +26,7 @@ function AddFoodItem({ foodItem }) {
   };
 
   return (
-    <div className="w-3/4 mx-auto rounded-none border border-slate-600 bg-primary mt-4 h-20 hover:bg-secondary">
+    <div className="w-3/5 mx-auto rounded border border-slate-600 bg-primary mt-4 h-20 hover:bg-secondary">
       <div className="collapse-title text-l font-bold text-neutral font-medium">
         <p>{label}</p>
         <p className="flex justify-between">

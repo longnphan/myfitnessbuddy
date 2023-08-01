@@ -6,9 +6,10 @@ import CaloriesDashboard from "./CaloriesDashboard";
 function Dashboard() {
   const [caloriesActive, setCaloriesActive] = useState(true);
 
-  const activeClass = "btn btn-primary border-none py-1 px-3 hover:bg-accent";
+  const activeClass =
+    "bg-secondary text-neutral rounded border-2 border-slate-300 py-1 px-3 hover:bg-accent";
   const unactiveClass =
-    "btn bg-slate-200 rounded border-none hover:border-gray-200 text-secondary hover:bg-accent py-1 px-3";
+    "bg-slate-300 rounded border-none hover:border-gray-200 text-slate-500 hover:bg-accent py-1 px-3";
 
   return (
     <>
