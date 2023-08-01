@@ -18,22 +18,22 @@ function FoodDetails() {
   };
 
   return (
-    <div className="card w-3/5 mx-auto lg:card bg-primary text-neutral shadow-xl mt-7 h-80">
-      <div className="mx-auto mt-6 font-medium space-y-1">
+    <div className="card w-3/5 mx-auto lg:card bg-primary text-neutral shadow-xl mt-7 h-72">
+      <p
+        className="text-2xl pl-2 text-neutral hover:text-accent cursor-pointer"
+        onClick={() => navigate("/tracker")}
+      >
+        &#8592;
+      </p>
+      <div className="mx-auto mt-2 font-medium space-y-1">
         <h1 className="text-2xl underline">{foodItem.food_name}</h1>
         <p>Carbohydrate: {foodItem.carbs}</p>
         <p>Protein: {foodItem.protein}</p>
         <p>Fat: {foodItem.fat}</p>
       </div>
-      <div className="flex mx-auto gap-2">
+      <div className="mx-auto">
         <div
-          className="btn py-4 mt-6 inline-block border border-blue-500 rounded btn-secondary text-neutral hover:bg-accent"
-          onClick={() => navigate("/tracker")}
-        >
-          Go Back
-        </div>
-        <div
-          className="btn py-4 mt-6 inline-block border border-blue-500 rounded btn-secondary text-neutral hover:bg-accent"
+          className="btn py-4 mt-6 rounded btn-neutral text-white hover:bg-accent"
           onClick={handleClick}
         >
           DELETE

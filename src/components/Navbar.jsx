@@ -60,12 +60,12 @@ function Navbar() {
           <div className="modal-action">
             {/* if there is a button in form, it will close the modal */}
             <button
-              className="btn hover:bg-slate-600"
+              className="btn hover:bg-accent"
               onClick={() => navigate("/profile")}
             >
               Edit Profile
             </button>
-            <button className="btn hover:bg-slate-600">Close</button>
+            <button className="btn hover:bg-accent">Close</button>
           </div>
         </form>
       </dialog>
