@@ -3,11 +3,8 @@ import { useSelector } from "react-redux";
 function RemainingCals() {
   const user = useSelector(state => state.user.profile);
   const { breakfast, lunch, dinner, snacks } = useSelector(state => state.user);
-  const bfMeals = breakfast.reduce((acc, food) => acc + food.calories, 0);
-  const lunchMeals = lunch.reduce((acc, food) => acc + food.calories, 0);
-  const dinnerMeals = dinner.reduce((acc, food) => acc + food.calories, 0);
-  const snackMeals = snacks.reduce((acc, food) => acc + food.calories, 0);
-  const calsConsumed = bfMeals + lunchMeals + dinnerMeals + snackMeals;
+  const allMeals = [...breakfast, ...lunch, ...dinner, ...snacks];
+  const calsConsumed = allMeals.reduce((acc, food) => acc + food.calories, 0);
 
   const calcDailyCals = bio => {
     if (bio.gender === "male") {
