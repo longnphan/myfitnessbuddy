@@ -26,14 +26,14 @@ function AddFoodItem({ foodItem }) {
   };
 
   return (
-    <div className="w-3/4 mx-auto rounded-none border border-slate-600 bg-slate-800 mt-4 h-20">
-      <div className="collapse-title text-l font-bold font-medium">
+    <div className="w-3/4 mx-auto rounded-none border border-slate-600 bg-primary mt-4 h-20 hover:bg-secondary">
+      <div className="collapse-title text-l font-bold text-neutral font-medium">
         <p>{label}</p>
         <p className="flex justify-between">
           Calories: {Math.round(ENERC_KCAL)} | Protein: {Math.round(PROCNT)} |
           Carbohydrates: {Math.round(CHOCDF)} | Fat: {Math.round(FAT)}{" "}
           <button
-            className="btn btn-ghost border-none normal-case text-2xl cursor-pointer hover:text-slate-400 hover:bg-transparent pb-4"
+            className="btn btn-ghost border-none normal-case text-2xl hover:text-accent hover:bg-transparent pb-4"
             onClick={handleClick}
           >
             +

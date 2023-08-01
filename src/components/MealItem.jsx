@@ -17,7 +17,7 @@ function MealItem({ meal }) {
 
   return (
     <>
-      <div className="w-3/5 mx-auto rounded-none border border-slate-600 bg-slate-800 mt-7">
+      <div className="w-3/5 mx-auto rounded border border-slate-600 bg-primary text-base-100 mt-7">
         <div className="flex justify-between collapse-title text-xl font-medium">
           <p>{meal}</p>
           <p>{calcCalories()}</p>
@@ -28,9 +28,9 @@ function MealItem({ meal }) {
       {mealData.length > 0 && renderFoodItems}
 
       {/* Add food button */}
-      <div className="w-3/5 mx-auto rounded-none border border-slate-600 bg-slate-800">
+      <div className="w-3/5 mx-auto rounded border border-slate-600 bg-primary">
         <Link to={`/searchfood/${lowercaseMeal}`}>
-          <p className="collapse-title text-xl text-blue-500 font-medium cursor-pointer">
+          <p className="collapse-title text-xl text-blue-700 font-medium hover:bg-secondary cursor-pointer">
             ADD FOOD
           </p>
         </Link>
