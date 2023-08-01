@@ -14,19 +14,19 @@ function Navbar() {
       </h1>
       <ul className="gap-6 pr-4">
         <li
-          className="btn btn-ghost border-none normal-case text-xl px-2 cursor-pointer hover:text-slate-400 hover:bg-transparent"
+          className="btn btn-ghost border-none normal-case text-xl px-2 hover:bg-transparent hover:text-secondary "
           onClick={() => navigate("/dashboard")}
         >
           Dashboard
         </li>
         <li
-          className="btn btn-ghost border-none normal-case text-xl px-2 cursor-pointer hover:text-slate-400 hover:bg-transparent"
+          className="btn btn-ghost border-none normal-case text-xl px-2 hover:bg-transparent hover:text-secondary "
           onClick={() => navigate("/tracker")}
         >
           Tracker
         </li>
         <li
-          className="btn btn-ghost border-none normal-case text-xl px-2 cursor-pointer hover:text-slate-400 hover:bg-transparent"
+          className="btn btn-ghost border-none normal-case text-xl px-2 hover:bg-transparent hover:text-secondary "
           onClick={() => navigate("/profile")}
         >
           Profile
