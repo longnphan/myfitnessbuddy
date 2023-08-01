@@ -21,6 +21,7 @@ const userSlice = createSlice({
     },
     updateProfile(state, action) {
       state.profile = action.payload;
+      // state.profile[action.payload.property] = action.payload.val
       console.log("This is profile in userSlice:", state.profile);
     },
   },
