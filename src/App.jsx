@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/NavBar";
+import Navbar from "./components/Navbar";
 import Form from "./components/Form";
 import MealDisplay from "./components/MealDisplay";
 import Dashboard from "./pages/Dashboard";
@@ -12,7 +12,6 @@ function App() {
   return (
     <>
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Form />} />
         <Route path="/dashboard" element={<Dashboard />} />
