@@ -4,10 +4,12 @@ import { useSelector } from "react-redux";
 
 function Navbar() {
   const navigate = useNavigate();
-  const profile = useSelector(state => state.user.profile);
+  const { name, age, height, weight } = useSelector(
+    state => state.user.profile
+  );
 
   const handleProfileClick = () => {
-    if (profile.name && profile.height) {
+    if (name && age && height && weight) {
       window.my_modal_1.showModal();
     } else {
       navigate("/profile");
@@ -46,9 +48,6 @@ function Navbar() {
       </div>
 
       {/* Modal */}
-      {/* <button className="btn" onClick={() => window.my_modal_1.showModal()}>
-        open modal
-      </button> */}
       <dialog id="my_modal_1" className="modal bg-base-100">
         <form method="dialog" className="modal-box bg-slate-300">
           <h3 className="font-bold text-neutral text-2xl">
