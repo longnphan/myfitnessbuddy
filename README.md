@@ -2,7 +2,7 @@
 
 ## Hosted at: https://myfitnessbuddy-o0mlozxbq-longnphan.vercel.app/
 
-#### Welcome to my calorie tracking web application. This application was created using React, Redux, Tailwind CSS, DaisyUI, React Google Charts, and Axios.
+#### Welcome to the My Fitness Buddy web application. This application was created using React, Redux, Tailwind CSS, DaisyUI, React Google Charts, Axios, and the Edamam Food Database API, https://www.edamam.com/
 
 ## Getting Started
 
@@ -37,3 +37,9 @@
     <img width="509" alt="image" src="https://github.com/longnphan/myfitnessbuddy/assets/67768035/ae94a259-c4a2-4ba8-a1b8-8ff410919dac">
 
 ## Dashboard Page
+
+1.  The Dashboard page will not have any charts displayed until users add food items to the **_Tracker_** page. After adding food items, users will see charts for their **_Daily Calories_** and **_Daily Macros._**
+
+2.  Users can toggle between charts by clicking on the **_Calories_** button or the **_Macros_** button.
+
+    <img width="662" alt="image" src="https://github.com/longnphan/myfitnessbuddy/assets/67768035/2c5c1a7d-12ce-45c4-903f-961b7bfc6aaf">
