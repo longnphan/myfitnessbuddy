@@ -31,7 +31,7 @@
 7.  Users can click on the food item they just added on the **_Tracker_** page to get more details about the food item. From here, users can:
 
         a.  Find macronutrient information about the food item.
-        b.  Delete the food item from their list by clicking on the **_DELETE_** button.
+        b.  Delete the food item from their list by clicking on the ***DELETE*** button.
         c.  Go back to the tracker page by clicking on the top left corner of the card.
 
     <img width="509" alt="image" src="https://github.com/longnphan/myfitnessbuddy/assets/67768035/ae94a259-c4a2-4ba8-a1b8-8ff410919dac">
