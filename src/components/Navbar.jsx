@@ -4,12 +4,10 @@ import { useSelector } from "react-redux";
 
 function Navbar() {
   const navigate = useNavigate();
-  const { name, age, height, weight } = useSelector(
-    state => state.user.profile
-  );
+  const { age, height, weight } = useSelector(state => state.user.profile);
 
   const handleProfileClick = () => {
-    if (name && age && height && weight) {
+    if (age && height && weight) {
       window.my_modal_1.showModal();
     } else {
       navigate("/profile");
@@ -54,8 +52,8 @@ function Navbar() {
             Profile Already Created
           </h3>
           <p className="py-4 text-neutral text-l font-medium">
-            Click EDIT PROFILE to update your profile or click CLOSE to
-            close this window.
+            Click EDIT PROFILE to update your profile or click CLOSE to close
+            this window.
           </p>
           <div className="modal-action">
             {/* if there is a button in form, it will close the modal */}

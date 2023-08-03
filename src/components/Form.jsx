@@ -2,9 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateProfile } from "../store/userSlice";
 import { useNavigate } from "react-router-dom";
-import { BsQuestionSquareFill } from "react-icons/bs";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
-AiOutlineQuestionCircle;
 
 function Form() {
   const userProfile = useSelector(state => state.user.profile);
@@ -31,7 +29,7 @@ function Form() {
 
   return (
     <>
-      <div className="mx-auto card w-3/5 bg-primary text-neutral-content mt-6">
+      <div className="mx-auto card w-3/5 bg-primary text-neutral-content mt-7">
         <AiOutlineQuestionCircle
           className="text-3xl cursor-pointer text-neutral hover:text-sky-100 ml-auto mr-3"
           onClick={handleInfoClick}
