@@ -18,26 +18,26 @@ function Navbar() {
     <>
       <div className="navbar bg-primary text-primary-content justify-between">
         <h1
-          className="btn btn-ghost border-none normal-case text-2xl hover:bg-transparent"
+          className="btn btn-ghost border-none normal-case text-s hover:bg-transparent sm:text-2xl"
           onClick={() => navigate("/dashboard")}
         >
-          MyFitnessBuddy <IoBarbell className="text-4xl" />
+          MyFitnessBuddy <IoBarbell className="text-2xl sm:text-4xl" />
         </h1>
         <ul className="gap-6 pr-4">
           <li
-            className="btn btn-ghost border-none normal-case text-xl px-2 hover:bg-transparent hover:text-secondary "
+            className="btn btn-ghost border-none normal-case text-s sm:text-xl px-2 hover:bg-transparent hover:text-secondary "
             onClick={() => navigate("/dashboard")}
           >
             Dashboard
           </li>
           <li
-            className="btn btn-ghost border-none normal-case text-xl px-2 hover:bg-transparent hover:text-secondary "
+            className="btn btn-ghost border-none normal-case text-s sm:text-xl px-2 hover:bg-transparent hover:text-secondary "
             onClick={() => navigate("/tracker")}
           >
             Tracker
           </li>
           <li
-            className="btn btn-ghost border-none normal-case text-xl px-2 hover:bg-transparent hover:text-secondary"
+            className="btn btn-ghost border-none normal-case text-s sm:text-xl px-2 hover:bg-transparent hover:text-secondary"
             onClick={handleProfileClick}
           >
             Profile
