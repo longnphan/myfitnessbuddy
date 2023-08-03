@@ -1,6 +1,6 @@
 # My Fitness Buddy
 
-## Hosted at: https://myfitnessbuddy-o0mlozxbq-longnphan.vercel.app/
+## Hosted at: https://myfitnessbuddy.vercel.app
 
 #### Welcome to the My Fitness Buddy web application. This application was created using React, Redux, Tailwind CSS, DaisyUI, React Google Charts, Axios, and the Edamam Food Database API, https://www.edamam.com/
 
@@ -8,7 +8,7 @@
 
 1.  Upon visiting the website, users will be greeted with a profile page. While it is not necessary to create a profile to use the website, it is recommended. Creating a profile allows the application to calculate the recommended number of calories a user should be consuming daily.
 
-    <img width="716" alt="image" src="https://github.com/longnphan/myfitnessbuddy/assets/67768035/cf8aeeb7-552c-4a1e-8f8a-8f6e2ac1b0c0">
+    <img width="691" alt="image" src="https://github.com/longnphan/myfitnessbuddy/assets/67768035/0a8721ef-316f-45ec-b82f-c256059e9b46">
 
 ## Tracker Page
 
@@ -20,7 +20,7 @@
 3.  To start tracking calories, start by clicking on the **_ADD FOOD_** link.
 4.  After clicking the **_ADD FOOD_** link, users will see a search bar. After typing a food item into the search bar and pressing the **Search** button, a list of foods will populate below the search bar. If user does not see the food item they are looking for, try to be specific and include brand names or restaurant names.
 
-    <img width="804" alt="image" src="https://github.com/longnphan/myfitnessbuddy/assets/67768035/dab44bd8-6593-4542-a7cc-98b4c9bdd972">
+    <img width="819" alt="image" src="https://github.com/longnphan/myfitnessbuddy/assets/67768035/9a4ecd28-cd76-4aca-9b07-526fa8089fe3">
 
 5.  Click on the **+** button to add the food item to the tracker. _Please note: the database data gives calorie data per one hundred gram serving of the food item. Adding the food item multiple times might be required depending on how many servings are being consumed_.
 
@@ -42,4 +42,4 @@
 
 2.  Users can toggle between charts by clicking on the **_Calories_** button or the **_Macros_** button.
 
-    <img width="662" alt="image" src="https://github.com/longnphan/myfitnessbuddy/assets/67768035/2c5c1a7d-12ce-45c4-903f-961b7bfc6aaf">
+    <img width="542" alt="image" src="https://github.com/longnphan/myfitnessbuddy/assets/67768035/7a354ff5-cc16-4944-acfc-c86eb130cd9c">
