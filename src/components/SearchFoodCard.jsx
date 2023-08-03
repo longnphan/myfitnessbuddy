@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-function SearchFoodCard({handleSubmit, handleOnChange, searchInput}) {
+function SearchFoodCard({ handleSubmit, handleOnChange, searchInput }) {
   const navigate = useNavigate();
 
   return (
@@ -20,7 +20,7 @@ function SearchFoodCard({handleSubmit, handleOnChange, searchInput}) {
             id="search"
             type="text"
             placeholder="Search for food item"
-            className="input input-bordered bg-opacity-100 input-info bg-base-100 w-full max-w-xs"
+            className="input input-bordered border-black text-black bg-sky-100  placeholder-gray w-full max-w-xs"
             value={searchInput}
             onChange={e => handleOnChange(e)}
           />
