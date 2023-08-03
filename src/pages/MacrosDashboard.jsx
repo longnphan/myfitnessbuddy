@@ -35,6 +35,27 @@ function MacrosDashboard() {
     setFat(newFat);
   };
 
+  const isFoodAdded = () => {
+    if (carbs || protein || fat) {
+      return (
+        <Chart
+          className="mx-auto my-auto"
+          chartType="PieChart"
+          data={data}
+          options={options}
+          width={"100%"}
+          height={"450px"}
+        />
+      );
+    } else {
+      return (
+        <p className="mx-auto text-neutral text-s sm:text-xl h-40 pt-14 ">
+          Please add food item to tracker
+        </p>
+      );
+    }
+  };
+
   useEffect(() => {
     calcMacros();
   }, []);
@@ -52,16 +73,7 @@ function MacrosDashboard() {
     backgroundColor: "",
   };
 
-  return (
-    <Chart
-      className="mx-auto my-auto"
-      chartType="PieChart"
-      data={data}
-      options={options}
-      width={"100%"}
-      height={"450px"}
-    />
-  );
+  return isFoodAdded();
 }
 
 export default MacrosDashboard;

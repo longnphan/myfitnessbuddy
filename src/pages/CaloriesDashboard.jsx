@@ -22,15 +22,27 @@ function CaloriesDashboard() {
     backgroundColor: "",
   };
 
-  return (
-    <Chart
-      chartType="PieChart"
-      data={data}
-      options={options}
-      width={"100%"}
-      height={"450px"}
-    />
-  );
+  const isFoodAdded = () => {
+    if (bfMeals || lunchMeals || dinnerMeals || snackMeals) {
+      return (
+        <Chart
+          chartType="PieChart"
+          data={data}
+          options={options}
+          width={"100%"}
+          height={"450px"}
+        />
+      );
+    } else {
+      return (
+        <p className="mx-auto text-neutral text-s sm:text-xl h-40 pt-14 ">
+          Please add food item to tracker
+        </p>
+      );
+    }
+  };
+
+  return isFoodAdded();
 }
 
 export default CaloriesDashboard;
