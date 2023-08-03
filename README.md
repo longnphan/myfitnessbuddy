@@ -1,4 +1,4 @@
-# My Fitness Buddy
+# MyFitnessBuddy
 
 ## Hosted at: https://myfitnessbuddy.vercel.app
 
@@ -8,7 +8,7 @@
 
 1.  Upon visiting the website, users will be greeted with a profile page. While it is not necessary to create a profile to use the website, it is recommended. Creating a profile allows the application to calculate the recommended number of calories a user should be consuming daily.
 
-    <img width="691" alt="image" src="https://github.com/longnphan/myfitnessbuddy/assets/67768035/0a8721ef-316f-45ec-b82f-c256059e9b46">
+    <img width="687" alt="image" src="https://github.com/longnphan/myfitnessbuddy/assets/67768035/3348e6cd-a475-4d59-82fd-0a0d47a8b28c">
 
 ## Tracker Page
 
