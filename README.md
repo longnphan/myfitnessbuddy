@@ -2,7 +2,14 @@
 
 ## Hosted at: https://myfitnessbuddy.vercel.app
 
-#### Welcome to the My Fitness Buddy web application. This application was created using React, Redux, Tailwind CSS, DaisyUI, React Google Charts, Axios, and the Edamam Food Database API, https://www.edamam.com/
+### Technologies used:
+ * React
+ * Redux
+ * Tailwind CSS
+ * DaisyUI
+ * React Google Charts
+ * Axios
+ * Edamam Food Database API, https://www.edamam.com/
 
 ## Getting Started
 
